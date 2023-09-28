@@ -1,7 +1,21 @@
 package com.dsa;
 
+import com.dsa.LinkedList.LinkedList;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+
+        LinkedList linkedList = new LinkedList(4);
+        linkedList.getHead();
+        linkedList.getTail();
+        linkedList.getLength();
+
+        System.out.println("\nLinked List:");
+        linkedList.printList();
+
+
+
+
     }
 }
