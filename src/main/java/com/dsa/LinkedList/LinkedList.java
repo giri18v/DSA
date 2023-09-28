@@ -51,7 +51,96 @@ public class LinkedList {
         System.out.println("Length: " + length);
     }
 
+    public void append(int value){
+        Node newNode = new Node(value);
+        if(length == 0){
+            head = newNode;
+            tail = head;
+        }else{
+            tail.next=newNode;
+            tail = newNode;
+        }
+        length++;
+        System.out.println("Appended new Node and length is:: "+ length);
+        System.out.println("Head Value is:: "+ head.value);
+        System.out.println("Tail value  is:: "+ tail.value);
+
+    }
+
+    public Node removeLastIndex(){
+
+        if(length ==0){
+            head =null;
+            tail = null;
+        }else{
+            Node temp =head;
+            Node pre = head;
+            while(temp.next != null){
+            pre =temp;
+            temp = temp.next;
+            }
+            tail = pre;
+            tail.next = null;
+            length --;
+            return temp;
+        }
+        return null;
+    }
+
+    public Node prependFirstIndex(int value){
+        Node newNode = new Node(value);
+        if(length ==0){
+            head = newNode;
+            tail = newNode;
+            tail.next=null;
+        }else{
+            newNode.next = head;
+            head = newNode;
+            length++;
+        }
+        return head;
+    }
+
+    public Node removeFirstIndex(){
+        if(length==0){
+            head =null;
+            tail=null;
+        }else{
+            Node temp =head;
+            head =head.next;
+            temp.next=null;
+            length--;
+            return temp;
+        }
+        return null;
+    }
+
+    public Node getIndexValue(int index){
+        Node temp = head;
+        for(int i=0;i<length;i++){
+           if(index == i){
+               return temp;
+           }else{
+               temp=temp.next;
+
+           }
+       }
+        return null;
+    }
 
 
+    public Node setIndexValue(int index,int value){
+        Node temp = head;
+        for(int i=0;i<length;i++){
+            if(index == i){
+                temp.value = value;
+                return temp;
+            }else {
+                temp =temp.next;
+            }
+        }
+        return null;
+
+    }
 
 }
