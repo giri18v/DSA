@@ -65,6 +65,16 @@ public class LinkedList {
         System.out.println("Head Value is:: "+ head.value);
         System.out.println("Tail value  is:: "+ tail.value);
 
+        String[] strs = new String[4];
+
+        String s = strs[0].substring(0,2);
+
+        char ch ='g';
+
+        if(s.equals(strs[0])){
+
+        }
+
     }
 
     public Node removeLastIndex(){

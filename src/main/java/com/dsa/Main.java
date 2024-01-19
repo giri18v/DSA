@@ -42,8 +42,14 @@ public class Main {
         System.out.println("\nLinked List:");
         linkedList.printList();
 
-
+        int a = 10;
+        String str ="q";
+     //  System.out.println( getLastDigit("3","10"));
 
 
     }
+
+
+
+
 }
